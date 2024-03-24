@@ -1,66 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="contact.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
 </style>
+<title>contactpage</title>
 </head>
 <body>
+  <link rel="stylesheet" href="style_homepage.css">
+  <div class="topnav">
+    <a href="HomePage.html" href="#home">Home</a>
+    <a href="PortfolioPage.html">Portfolio</a>
+    <a href="SkillPage.html" href="#skills">Skills</a>
+    <a class="active" href="ContactPage.html" href="#contact"calss="active">Contact</a>
+  </div>
+  
 
-<h3>Contact Form</h3>
+<h3>Contact Eungyeol</h3>
 
 <div class="container">
-  <form action="/action_page.php">
+
     <label for="fname">First Name</label>
     <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
     <label for="lname">Last Name</label>
     <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
-    <label for="country">Country</label>
-    <select id="country" name="country">
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
+    <label for="purpose">Purpose</label>
+    <select id="purpose" name="purpose">
+      <option value="Hiring">Hiring</option>
+      <option value="Business">Business</option>
+      <option value="Interaction">Interaction</option> 
+      <option value="Question">Question</option>
+
+      
     </select>
 
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    <!-- <label for="message">Leave message</label>
+    <textarea id="subject" name="subject" placeholder="Your message..." style="height:200px" ></textarea>
 
-    <input type="submit" value="Submit">
-  </form>
+    <input type="submit" value="Submit" style="color: rgb(99, 99, 99);">
+    <div id="result"></div>
+    <script>
+      // Function to handle form submission
+      document.getElementById("container").addEventListener("submit", function(event) {
+          event.preventDefault(); // Prevent the default form submission
+    
+          // Get the input value
+          var inputValue = document.getElementById("submit").value;
+    
+          // Display the input value below the button
+          document.getElementById("result").innerText = "You entered: " + inputValue;
+      });
+    </script> -->
+
+    <div class="container">
+      <form id="myForm">
+        <label for="message">Leave a message</label>
+        <br>
+        <textarea id="subject" name="subject" placeholder="Your message..." style="width: 600px; height:300px;"></textarea>
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+      <div id="result"></div>
+    </div>
+    
+    <script>
+      // Function to handle form submission
+      document.getElementById("myForm").addEventListener("submit", function(event) {
+          event.preventDefault(); // Prevent the default form submission
+    
+          // Get the textarea value
+          var inputValue = document.getElementById("subject").value;
+    
+          // Display the textarea value below the button
+          document.getElementById("result").innerText = "Sorry, the backend is under development." + inputValue;
+      });
+    </script>
+
 </div>
 
 </body>
