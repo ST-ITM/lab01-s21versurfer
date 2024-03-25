@@ -35,13 +35,6 @@ body {
   padding: 20px;
 }
 
-.opening{
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #e9b98c;
-  text-align: center;
-  padding: 10px;
-}
 
 .accordion {
   display: flex;
